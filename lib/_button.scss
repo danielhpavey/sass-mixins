@@ -1,0 +1,26 @@
+@mixin button($width, $height, $backgroundcolor, $color){
+    border:none;
+    width:$width;
+    height:$height;
+    background: linear-gradient( $backgroundcolor, darken($backgroundcolor, 13%) );
+    color:$color;
+	margin: 10px 0;
+  	text-align: center;
+  	cursor: pointer;
+    border-radius:3px;
+    border-bottom:darken($backgroundcolor, 20%) solid 5px;
+
+    &:hover, &:focus{
+        background: linear-gradient( darken($backgroundcolor, 8%), darken($backgroundcolor, 30%) );
+        transition: all 0.3s ease;
+        border-bottom:darken($backgroundcolor, 35%) solid 5px;
+        outline:0;
+    }
+    &:active{
+        background:linear-gradient( darken($backgroundcolor, 25%) );
+        border:none;
+        box-shadow:inset 0 0 10px #000000;
+    }
+
+    
+}
