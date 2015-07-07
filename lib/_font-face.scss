@@ -11,6 +11,7 @@
 			weight: normal;
 		}
 		src: url($font-url + '/' + $font-name + '.eot') format('eot'), 
+			 url($font-url + '/' + $font-name + '.woff2') format('woff2'), 
 			 url($font-url + '/' + $font-name + '.woff') format('woff'), 
 			 url($font-url + '/' + $font-name + '.ttf')  format('truetype'),
 			 url($font-url + '/' + $font-name + '.svg#' + $font-name) format('svg');
