@@ -1,26 +1,59 @@
-$bodyfontcolour: #646464;
-	
-@include font-face( 'Nexa-bold', '../font', 'Nexa_Free_Bold-webfont');
-
 body{
 	font:{
-		size:16px;
+		size:100%;
 		family: Georgia, Times, "Times New Roman", serif;
 }
 	color: $bodyfontcolour;
 
 }
 
+
+// Default Typography Scale Based on: http://typecast.com/blog/a-more-modern-scale-for-web-typography
+body{
+    line-height:1.25em;
+
+    @include breakpoint ( small ){
+        line-height:1.375em;
+    }
+
+}
+
 h1{
-	font:{
-		family: Nexa-bold;
-		size:3.8em;
-	}
-	text:{
-		align:center;
-		transform:uppercase;
-	}
+    font-size:2em;
+    line-height:1.25em;
+    
+    @include breakpoint ( small ){
+        font-size:3em;
+        line-height:1.05em;
+    }
+}
 
-	letter-spacing:-0.03em;
+h2{
+    font-size: 1.625em;
+    line-height:1.1538461em;
 
+    @include breakpoint ( small ){
+        font-size:2.25em;
+        line-height:1.25em;
+    }
+}
+
+h3{
+    font-size:1.375em;
+    line-height:1.13636364em;
+
+    @include breakpoint ( small ){
+        font-size:1.75em;
+        line-height:1.25em;
+    }
+}
+
+h4{
+    font-size:1.125em;
+    line-height:1.11111111em;
+
+    @include breakpoint ( small ){
+        font-size:1.125em;
+        line-height:1.22222222em;
+    }
 }
