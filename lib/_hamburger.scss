@@ -1,0 +1,30 @@
+/*
+* CSS Animated Hamburger Menu 
+*/
+
+@mixin hamburger{
+    
+    $linewidth: 3px;
+    span{
+       height:$linewidth;
+        background:$white;
+        width:$basescale;
+        display:inline-block; 
+        position:relative;
+        top:-4px;
+        margin-right:$basescale/2;
+        &:before, &:after{
+            @include transition( all, 0.2s, ease-out );
+            content:" ";
+            position:absolute;
+            display:block;
+            height:$linewidth;
+            background:$white;
+            width:100%;
+            top:-8px;
+        }
+        &:after{
+            top:8px;    
+        }
+    }
+}
